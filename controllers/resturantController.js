@@ -2,6 +2,8 @@ const Restaurant = require("../models/resturantModel");
 const catchAsync = require("../utils/catchAsync");
 const AppError = require("../utils/appError");
 
+//Route Handlers
+
 exports.getAllRestro = catchAsync(async (req, res, next) => {
   const limit = req.query.limit * 1 || 0;
   const restaurants = await Restaurant.find().limit(limit);
