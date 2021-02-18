@@ -11,7 +11,7 @@ router
 
 router.route("/restaurantId/:restroId").get(resturantController.getRestro);
 
-router.route("/cuisine").get(resturantController.getRestroCuisines);
+router.route("/cuisine/").get(resturantController.getRestroCuisines);
 
 router
   .route("/:id")
